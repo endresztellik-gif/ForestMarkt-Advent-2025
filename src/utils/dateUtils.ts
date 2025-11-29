@@ -1,8 +1,8 @@
 import { addDays, isBefore, isSameDay, format } from 'date-fns'
 import { hu } from 'date-fns/locale'
 
-// ⚠️ TESZT MÓD - állítsd false-ra éles használathoz!
-export const TEST_MODE = true
+// ⚠️ TESZT MÓD - állítsd true-ra teszteléshez!
+export const TEST_MODE = false
 
 export const ADVENT_START = new Date(2025, 10, 30) // November 30, 2025
 export const ADVENT_END = new Date(2025, 11, 24)   // December 24, 2025
