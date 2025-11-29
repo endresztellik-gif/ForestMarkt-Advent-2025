@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-advent-gold: #D4AF37;
+  --color-advent-red: #C75B5B;
+  --color-advent-green: #2D5A3D;
+  --color-advent-lightGreen: #4A7C59;
+  --color-advent-blue: #5B8FA8;
+  --color-advent-cream: #F5E6C8;
+  --color-advent-darkRed: #8B4545;
+  --color-advent-beige: #D4C4A8;
+  --color-advent-forestGreen: #1D4332;
+
+  --font-family-display: 'Playfair Display', serif;
+}
+
+body {
+  font-family: var(--font-family-display);
+  background-color: var(--color-advent-forestGreen);
+  min-height: 100vh;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Snowfall animation */
+@keyframes snowfall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(30px) rotate(360deg);
+    opacity: 0.3;
+  }
+}
+
+.animate-snowfall {
+  animation: snowfall linear infinite;
+}
