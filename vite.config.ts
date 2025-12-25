@@ -9,7 +9,7 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['photos/*.jpg', 'logo/*', 'icons/*'],
+      includeAssets: ['photos/*.jpg', 'newyear/*.jpg', 'logo/*', 'icons/*'],
       manifest: {
         name: 'ForestMarkt Adventi Kalendárium',
         short_name: 'Advent 2025',
@@ -56,6 +56,17 @@ export default defineConfig({
               expiration: {
                 maxEntries: 5,
                 maxAgeSeconds: 60 * 60 * 24 * 30
+              }
+            }
+          },
+          {
+            urlPattern: /\/newyear\/.*\.jpg$/,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'newyear-photos-cache',
+              expiration: {
+                maxEntries: 10,
+                maxAgeSeconds: 60 * 60 * 24 * 30 // 30 nap
               }
             }
           }

@@ -5,6 +5,7 @@ interface PhotoModalProps {
   dayNumber: number
   quote: string
   dateLabel: string
+  photoPath?: string  // Opcionális custom path (pl. /newyear/1.jpg)
   onClose: () => void
 }
 
@@ -12,6 +13,7 @@ export default function PhotoModal({
   dayNumber,
   quote,
   dateLabel,
+  photoPath,
   onClose
 }: PhotoModalProps) {
   // ESC gomb kezelése
@@ -86,7 +88,7 @@ export default function PhotoModal({
           {/* Fénykép - object-contain, hogy ne vágja le */}
           <div className="flex-1 min-h-0 bg-[#2C3E50] flex items-center justify-center p-4 pt-14">
             <img
-              src={`/photos/${dayNumber}.jpg`}
+              src={photoPath || `/photos/${dayNumber}.jpg`}
               alt={`${dayNumber}. nap fotója`}
               className="max-w-full max-h-[60vh] object-contain rounded shadow-xl"
               onError={(e) => {

@@ -42,3 +42,147 @@ body {
 .animate-snowfall {
   animation: snowfall linear infinite;
 }
+
+/* Confetti fall animation (New Year) */
+@keyframes confettiFall {
+  0% {
+    transform: translateY(-10vh) translateX(0) rotateZ(0deg) rotateY(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(60px) rotateZ(720deg) rotateY(360deg);
+    opacity: 0.5;
+  }
+}
+
+.animate-confetti {
+  animation: confettiFall linear infinite;
+}
+
+
+/* Falling champagne glasses animation (New Year) */
+@keyframes champagneFall {
+  0% {
+    transform: translateY(-100px) translateX(0) rotate(-15deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(30vh) translateX(20px) rotate(15deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-10px) rotate(-10deg);
+  }
+  70% {
+    transform: translateY(70vh) translateX(15px) rotate(5deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.animate-champagne {
+  animation: champagneFall ease-in-out infinite;
+}
+
+/* Party hat fall animation (New Year Greeting) */
+@keyframes partyhatFall {
+  0% {
+    transform: translateY(-80px) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(50vh) translateX(30px) rotate(180deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) translateX(-20px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-partyhat {
+  animation: partyhatFall ease-in-out infinite;
+}
+
+/* Balloon floating up animation (New Year Greeting) */
+@keyframes balloonFloat {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(-30vh) translateX(-15px) rotate(-5deg);
+  }
+  50% {
+    transform: translateY(-50vh) translateX(20px) rotate(5deg);
+  }
+  70% {
+    transform: translateY(-70vh) translateX(-10px) rotate(-3deg);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(0) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.animate-balloon {
+  animation: balloonFloat ease-in-out infinite;
+}
+
+/* Serpentine spiral unfurl animation - JAVÍTOTT (New Year Greeting) */
+@keyframes serpentineSpiral {
+  0% {
+    transform: translateY(-80px) translateX(0) scaleY(0.1) rotateZ(0deg);
+    opacity: 0;
+  }
+  15% {
+    transform: translateY(15vh) translateX(40px) scaleY(0.4) rotateZ(180deg);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(30vh) translateX(-30px) scaleY(0.7) rotateZ(360deg);
+    opacity: 1;
+  }
+  45% {
+    transform: translateY(45vh) translateX(50px) scaleY(1) rotateZ(540deg);
+    opacity: 1;
+  }
+  60% {
+    transform: translateY(60vh) translateX(-40px) scaleY(1.1) rotateZ(720deg);
+    opacity: 0.9;
+  }
+  75% {
+    transform: translateY(75vh) translateX(35px) scaleY(1.15) rotateZ(900deg);
+    opacity: 0.8;
+  }
+  90% {
+    transform: translateY(90vh) translateX(-25px) scaleY(1.2) rotateZ(1080deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(110vh) translateX(0) scaleY(1.25) rotateZ(1260deg);
+    opacity: 0;
+  }
+}
+
+.animate-serpentine-spiral {
+  animation: serpentineSpiral ease-in-out infinite;
+}
